@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: rgb(0, 0, 0);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  box-shadow: rgb(255, 255, 255) 0px 8px 24px;
+  border-radius: 15px ;
+  color: white;
+  width: 75%;
+  min-height: 70vh;
+  margin: auto;
+  margin-top: 5vh;
+  padding: 30px;
+  
 }
+.sub-container{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.toggleBtn{
+  box-shadow: rgba(255, 255, 255, 0.849) 0px 8px 24px;
+  float: right;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+li{
+  list-style-type: none;
+  background:white;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+}
+.left, .right{
+  height: auto;
+  width: 100%;
+  text-align: justify;
+  padding: 20px;
+  font-size: 18pt;
+}
+.left{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.customButton{
+  background: none;
+  border: 2px solid rgb(134, 248, 182);
+  border-radius: 5px;
+  height: 50px;
+  margin: 10px;
   color: white;
+  font-size: 12pt;
+  cursor: pointer;
+}
+.active{
+  background-color: rgb(134, 248, 182);
+  color: black;
+}
+.right ul li{
+  border-radius: 5px;
+}
+.right ul li img{
+  display: inline;
+  /* float: right; */
+  height: 10%;
+  width: 15%;
 }
 
-.App-link {
-  color: #61dafb;
+.right ul li span{
+  margin: 10px 0;
+  margin-left: 20px;
+  /* float: right; */
+  color: rgb(0, 0, 0);
+}
+.right ul li p{
+  color: rgb(92, 92, 92);
+  font-size: 14pt;
+  letter-spacing: 0.1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* responsive designing  */
+
+@media only screen and (max-width: 600px) {
+ 
+  .container{
+      width: 90%;
+      min-height: 90vh;
+      margin-top: 5vh;
+      padding: 10px;
+      padding-top: 20px;
+      
   }
-  to {
-    transform: rotate(360deg);
+  li{
+      padding: 5px;
+      margin: 5px;
+      width: 100%;
+  }
+  .sub-container{
+      width: 100%;
+      padding-top: 10px;
+  }
+  .right{
+      text-align: left;
+      padding: 5px;
+      font-size: 9pt;
+      font-weight: bold;
+      width: 80%;
+  }
+  .left{
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      padding:5px
+  }
+  .customButton{
+      height: 50px;
+      margin: 5px;
+      font-size: 9pt;
+      font-weight: bolder;
+  }
+  .active{
+      background-color: rgb(134, 248, 182);
+      color: black;
+  }
+  .right ul li span{
+      float: right;
+      color: rgb(9, 221, 83);
+      margin-left: 0px;
+  }
+  .right ul li p{
+      font-size: 12pt;
   }
 }
